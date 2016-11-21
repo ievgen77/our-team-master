@@ -1,0 +1,31 @@
+<svg id="image_border" data-name="image border" xmlns="http://www.w3.org/2000/svg" width="422" height="422" viewBox="0 0 422 422">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fc0;
+        stroke-width: 4px;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Group_1_copy" data-name="Group 1 copy">
+    <path class="cls-1" d="M457,367.93h1v100h-1v-100Z" transform="translate(-455 -365)"/>
+    <rect class="cls-2" x="2" y="2" width="100" height="1"/>
+  </g>
+  <g id="Group_1_copy_3" data-name="Group 1 copy 3">
+    <rect class="cls-2" x="419" y="2.938" width="1" height="100.062"/>
+    <rect class="cls-2" x="320" y="2" width="100" height="1"/>
+  </g>
+  <g id="Group_1_copy_4" data-name="Group 1 copy 4">
+    <rect class="cls-2" x="2" y="319.063" width="1" height="100"/>
+    <rect class="cls-2" x="2" y="419" width="100" height="1"/>
+  </g>
+  <g id="Group_1_copy_5" data-name="Group 1 copy 5">
+    <rect class="cls-2" x="419" y="319" width="1" height="100.063"/>
+    <rect class="cls-2" x="320" y="419" width="100" height="1"/>
+  </g>
+</svg>

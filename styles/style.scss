@@ -1,0 +1,251 @@
+@import 'normalize.css';
+@import 'layout';
+@import 'fonts';
+
+$text-color: #333;
+$secondary-text-color: #898f8f;
+$brand-color: #ffcc00;
+
+@mixin title-font {
+	font-family: Roboto, sans-serif;
+	font-weight: 900;
+}
+@mixin text-font {
+	font-family: Raleway, sans-serif;
+	font-weight: 500;
+}
+
+
+body {
+	padding: 110px 0 90px;
+	color: $text-color;
+}
+
+.ba-header {padding-bottom: 35px;}
+
+.ba-sub-title,
+.ba-title {
+	margin: 0;
+	line-height: 1;
+}
+.ba-sub-title {
+	@include text-font;
+	color: $secondary-text-color;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.ba-title {
+	@include title-font;
+	color: $brand-color;
+	text-transform: uppercase;
+	font-size: 60px;
+	padding-top: 20px;
+}
+
+.ba-divider {
+	width: 35px;
+	height: 19px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 200px;
+		height: 1px;
+		background-color: $brand-color;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&:before {right: 100%;}
+	&:after {left: 100%;}
+}
+
+[class*="fa-angle-"] {
+	color: $brand-color;
+	&:hover {
+		color: lighten($brand-color, 10%);
+		cursor: pointer;
+	}
+}
+
+.ba-column-6__border {border-right: 1px solid $brand-color;}
+
+.ba-slider {
+	position: relative;
+	margin-top: 40px;
+	&__arrow {
+		border: none;
+		background-color: #FFF;
+		width: 40px;
+		height: 40px;
+		&--right {position: absolute;
+			right: 0;
+			top:50%;
+			transform: translateY(-50%);
+		}
+		&--left {position: absolute;
+			left: 0;
+			top:50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.ba-column-6 {padding: 75px 0;}
+	&__image {
+		padding: 15px;
+		position: relative;
+		text-align: center;
+		width: 80%;
+		margin: 0 auto;
+		$corner-size: 100px;
+		.ba-corner {
+			position: absolute;
+			width: $corner-size;
+			height: $corner-size;
+			border-width: 1px;
+			border-color: $brand-color;
+			&--tl {
+				top: 0;
+				left: 0;
+				border-left-style: solid;
+				border-top-style: solid;
+			}
+			&--tr {
+				top: 0;
+				right: 0;
+				border-top-style: solid;
+				border-right-style: solid;
+			}
+			&--br {
+				bottom: 0;
+				right: 0;
+				border-bottom-style: solid;
+				border-right-style: solid;
+			}
+			&--bl {
+				bottom: 0;
+				left: 0;
+				border-bottom-style: solid;
+				border-left-style: solid;
+			}
+		}
+		img {
+			border: 1px solid $brand-color;
+			width: 100%;
+		}
+	}
+	&__text {padding: 0 80px;}
+}
+
+.ba-team {
+	&__name {
+		@include title-font;
+		font-size: 36px;
+		position: relative;
+		&:after {
+			position: absolute;
+			content: "";
+			width: 70px;
+			height: 1px;
+			background-color: $brand-color;
+			top: 75px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__position {
+		font-family: Raleway, sans-serif;
+		font-weight: 400;
+		font-size: 24px;
+		color: $text-color;
+		margin-top: 70px;
+	}
+	&__biography {
+		margin-top: 30px;
+		@include text-font;
+		font-size: 14px;
+		color: $text-color;
+		line-height: (24/14);
+	}
+	&__link {
+		display: inline-block;
+		height: 26px;
+		width: 120px;
+		text-decoration: none;
+		border: 1px solid $brand-color;
+		color: $text-color;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: (24/14);
+		text-align: center;
+		letter-spacing: 0;
+		font-size: 14px;
+		margin-top: 25px;
+		&:hover {background-color: $brand-color;}
+	}
+
+}
+
+$color-socials: #cccccc;
+.ba-socials {
+	list-style: none;
+	padding: 0;
+	margin-top: 30px;
+	&__item {
+		display: inline-flex;
+		border: 1px solid $color-socials;
+		border-radius: 50%;
+		height: 30px;
+		width: 30px;
+		align-items: center;
+		justify-content: center;
+		& * {color: $color-socials;}
+		&+& {margin-left: 5px;}
+		&:hover {
+			cursor: pointer;
+			transform: scale(1.1);
+		}
+
+	}
+}
+
+.ba-separator {
+	position: relative;
+	width: 20px;
+	height: 4px;
+	background-color: $brand-color;
+	margin: 25px auto 0;
+	&:before, &:after {
+		content: "";
+		width: 10px;
+		height: 4px;
+		background-color: $brand-color;
+		position: absolute;
+	}
+	&:before {right: 125%;}
+	&:after {left: 125%;}
+}
+
+.ba-indicators {
+	padding: 0;
+	list-style: none;
+	&__item {
+		display: inline-block;
+		margin-top: 40px;
+		&+& {margin-left: 10px;}
+	}
+	&__button {
+		height: 13px;
+		background-color: $brand-color;
+		border: 1px solid $brand-color;
+		border-radius: 50%;
+		&--active {background-color: #fff;}
+		&:hover {cursor: pointer;}
+	}
+}
+
+
+
